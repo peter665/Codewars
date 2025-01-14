@@ -12,8 +12,8 @@ def sort_array(arr):
     odd = sorted([x for x in arr if x % 2 != 0])
     res = []
     for x in arr:
-        if x % 2 == 0:
-            res.append(x)
-        else:
-            res.append(odd.pop(0))
+        res.append(x) if x % 2 == 0 else res.append(odd.pop(0))
+
     return res
+
+print(sort_array([5, 8, 6, 3, 4]))
