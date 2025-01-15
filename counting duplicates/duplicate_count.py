@@ -15,5 +15,6 @@
 
 def duplicate_count(text):
     lst = list(text.lower())
-    d= {x: lst.count(x.lower()) for x in lst}
+    d= {x: lst.count(x) for x in lst}
     return sum(1 for v in d.values() if v > 1)
+
